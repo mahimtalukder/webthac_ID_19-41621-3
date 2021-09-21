@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #F5F5F5;
+            }
+            #style1 {
+              display: inline-block;
+              width: 150px;
+              text-align: right;
+              font-weight: bold;
+            }
+            #style2 {
+              display: inline-block;
+              width: 300px;
+              text-align: right;
+            }
+        </style>
+        <title>
+            Problem 1
+        </title>
+    </head>
+    <body>
+        <p><span style="color:#FF0000;">*</span> . Donetes Required Information</p>
+        <p> <strong>> 1 Donation </strong> >2 Confirmation > Thank You!</p>
+        <h3><span style="color:#FF0000;">Donor Information</span></h3>
+        <form action="">
+            <label id=style1> First Name <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="fname"><br>
+            <label  id=style1> Last Name <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="lname"><br>
+
+            <label  id=style1> Company</label>
+            <input type="text" name="company"><br>
+
+            <label  id=style1> Address 1 <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="ad1"><br>
+            <label  id=style1> Address 2</label>
+            <input type="text" name="ad2"><br>
+            <label  id=style1> City <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="city"><br>
+            <label  id=style1> State <span style="color:#FF0000;">*</span></label>
+            <select name="state">
+                <option value="" disabled selected>Select a state</option>
+                <option value="Uttara">Uttara</option>
+                <option value="Khilkhet">Khilkhet</option>
+                <option value="Basundhara">Basundhara</option>
+                <option value="Santinagar">Santinagar</option>
+            </select><br>
+            <label  id=style1> Zip Code <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="zip"><br>
+            <label  id=style1> Country <span style="color:#FF0000;">*</span></label>
+            <select name="country" style="width:200px;">
+                <option value="" disabled selected>Select a country</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+            </select><br>
+            <label  id=style1> Phone</label>
+            <input type="text" name="phone"><br>
+            <label  id=style1> Fax</label>
+            <input type="text" name="fax"><br>
+            <label  id=style1> Email <span style="color:#FF0000;">*</span></label>
+            <input type="text" name="email"><br>
+
+            <label  id=style1> Donation Amount <span style="color:#FF0000;">*</span></label>
+            <input type="radio" name="donation" value="None" checked >
+            <label>None</label>
+            <input type="radio" name="donation" value="$50">
+            <label>$50</label>
+            <input type="radio" name="donation" value="$75">
+            <label>$75</label>
+            <input type="radio" name="donation" value="$100">
+            <label>$100</label>
+            <input type="radio" name="donation" value="$250">
+            <label>$250</label>
+            <input type="radio" name="donation" value="other">
+            <label>other</label><br>
+            <label>(Check a button or typw in your amount) <strong>Other Amount $ </strong></label>
+            <input type="text" name="other_amount"><br>
+
+            <label id=style1>Recurring Donation</label>
+            <input type="checkbox" name="rdonation" value="I_am_interested">
+            <label>I am interested in giving on a regular basis</label><br>
+            <label style="display: block; width: 150px; text-align: right; ">(checked if yes) </label>
+            
+            <label id=style2>Monthly Credit Card $  </label>
+            <input type="text" name="mcredit" style="width:50px;">
+            <label>For </label>
+            <input type="text" name="credit_month" style="width:50px;">
+            <label2>Months </label>
+
+            <h3><span style="color:#FF0000;">Honorarium and Memorial Donation Information</span></h3>
+
+            <label  id=style1> I would like to make</label>
+            <input type="radio" name="donation_type" value="to_honor">
+            <label>To Honor</label><br>
+            <label id=style1>this donation</label>
+            <input type="radio" name="donation_type" value="in_memory_of">
+            <label style="width:250px;">In Memory Of<label><br>
+
+            <label id=style1>Name </label>
+            <input type="text" name="h_m_name"><br>
+
+            <label id=style1>Acknowledge </label>
+            <input type="text" name="donation_to"><br>
+            <label id=style1> Donation to </label><br>
+
+            <label id=style1>Address </label>
+            <input type="text" name="h_m_address"><br>
+
+            <label  id=style1> State </label>
+            <select name="h_m_state">
+                <option value="" disabled selected>Select a state</option>
+                <option value="Uttara">Uttara</option>
+                <option value="Khilkhet">Khilkhet</option>
+                <option value="Basundhara">Basundhara</option>
+                <option value="Santinagar">Santinagar</option>
+            </select><br>
+
+            <label  id=style1> Zip</label>
+            <input type="text" name="h_m_zip"><br>
+
+            <h3><span style="color:#FF0000;">Additional Information</span></h3>
+            <p>Please enter Your name, company or organization as you would like it to appear in our publications :</p>
+
+            <label id=style1>Name </label>
+            <input type="text" name="ad_name"><br>
+
+            <input type="checkbox" name="checkbox1" value="I would like my gift to remain anonymous.">
+            <label>I would like my gift to remain anonymous.</label><br>
+            <input type="checkbox" name="checkbox2" value="My employer offers a matching gift program.I will mail the matching gift form.">
+            <label>My employer offers a matching gift program.I will mail the matching gift form.</label><br>
+            <input type="checkbox" name="checkbox3" value="Please save the cost of acnowledging this gift by not mailing a thank you letter.">
+            <label>Please save the cost of acnowledging this gift by not mailing a thank you letter.</label><br>
+
+            <label style="vertical-align:top; display: inline-block; width: 150px; text-align: right;"><strong>Comments  </strong><br>(Please Type any question or feedback here)</label>
+            <textarea name="message" rows="30" cols="30" style="width:400px; height:100px;">
+            </textarea><br>
+
+            <label style=" display: inline-block; width: 150px; text-align: right; font-weight: bold;">How may we contact you? </label>
+            <input type="checkbox" name="c_checkbox1" value="E-mail">E-mail <br>
+            <input type="checkbox" name="c_checkbox2" value="Postal Mail" style=" margin-left:160px">Postal Mail <br>
+            <input type="checkbox" name="c_checkbox3" value="Telephone" style="margin-left:160px">Telephone <br>
+            <input type="checkbox" name="c_checkbox4" value="Fax" style="margin-left:160px">Fax <br>
+
+            <label style="color: gray;">I would like to receive newsletters and information about special event by :</label><br>
+            <input type="checkbox" name="a_checkbox1" value="E-mail" style=" margin-left:160px">E-mail <br>
+            <input type="checkbox" name="a_checkbox2" value="Postal Mail" style=" margin-left:160px">Postal Mail <br>
+            
+            <input type="checkbox" name="l_checkbox1" value="I would like information about volunteering with the">I would like information about volunteering with the<br>
+
+            <input type="text" style="width:500px;" disabled><br>
+
+            <input type="submit" value="Submit" style="margin-left:160px">
+            <input type="reset">
+        </form>
+
+        <p><img src="lock.jpg" height="15px" width="15px"> Donate online with confidence. You are on a secured server</p>
+        <p>If you have any problems or questions, Please contact <a href="https://www.facebook.com/mahim.talukder.75/" target="blank">support</a></p>
+    </body>
+</html>
