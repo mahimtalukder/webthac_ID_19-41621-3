@@ -1,0 +1,121 @@
+.background_color{
+    background-image: linear-gradient(to right, #bdc3c7 ,#2c3e50);
+}
+
+
+
+.outer_box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+h1{
+    color: #4169E1;
+}
+
+.inerBox{
+    width: 800px;
+    background: #fff;
+    display: flex;
+    padding-left: 50px;
+    box-shadow: -2px 2px 20px #696969;
+    border-radius: 15px;
+}
+
+
+.inerBox form .name_email{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: 10px 0 12px 0;
+    width: 530px;
+  }
+
+
+.input_style{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input_style1{
+    font-size: 20px;
+    font-weight: 500;
+    width:30px;
+}
+
+.legend_style{
+    margin-top: 25px; margin-bottom: 0px;
+}
+
+
+.gender{
+    margin-top: 0px; margin-bottom: 0px;
+}
+
+.span_style{
+    color: red;
+    font-size: 10px;
+    font-weight: 247px;
+    width: 247px;
+}
+
+.dob{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 12px 0;
+    margin-top: 0px; margin-bottom: 0px;
+}
+
+select{
+    font-size: 20px;
+    font-weight: 500;
+    width: 150px;
+}
+
+hr{
+    margin-top: 2px; margin-bottom: 0px;
+    margin-left:0;
+    width:300px;
+}
+
+table{
+    text-align: left; 
+    vertical-align:top; 
+    border-style: none;
+}
+
+.td1{
+    text-align: left; 
+    vertical-align:top; 
+    width: 450px;
+}
+
+.td2{
+    width: 350px;
+}
+.button{
+    width: 500px;
+}
+.submit_button {
+  background-color: #4169E1;
+  color:	white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 8px 50%;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
