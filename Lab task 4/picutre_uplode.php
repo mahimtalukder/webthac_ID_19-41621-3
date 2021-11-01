@@ -11,6 +11,10 @@
 <body class="background_color">
     <?php
     session_start();
+    if (!isset($_SESSION['username'])) {
+		session_destroy();
+		header("location:login.php");
+	}
     $pictureErr = $passwordErr = $confirm_passwordErr = "";
     $ImageError = $UploadConfirmation = "";
     $target_file = "";
@@ -18,12 +22,15 @@
     $mypic = "";
 
     if (isset($_POST['submit'])) {
-        $target_dir = "uploads/";
+        $target_dir = "picture/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $filepath = "";
         if ($_FILES['fileToUpload']['name'] != "") {
+            if ($old_file != "broken.png") {
+                unlink($old_file);
+            }
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if ($check !== false) {
 
@@ -54,9 +61,6 @@
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $mypic = $target_file;
                     $UploadConfirmation = "File has been uploaded Successfully";
-                    if ($old_file != "broken.png") {
-                        unlink($old_file);
-                    }
                     $filepath = $target_dir . htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
 
                     $data = file_get_contents("data.json");

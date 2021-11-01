@@ -12,6 +12,10 @@
     <?php
 
     session_start();
+    if (!isset($_SESSION['username'])) {
+		session_destroy();
+		header("location:login.php");
+	}
     $nameErr =$emailErr=$dobErr=$genderErr = $passwordErr = $confirm_passwordErr = "";
     $name = $username = $password  = $email = $dob = $picture = "";
     $username=$_SESSION["username"];

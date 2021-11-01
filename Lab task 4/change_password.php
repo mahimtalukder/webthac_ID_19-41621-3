@@ -11,6 +11,10 @@
 <body class="background_color">
     <?php
     session_start();
+    if (!isset($_SESSION['username'])) {
+		session_destroy();
+		header("location:login.php");
+	}
     $passwordErr = $new_passwordErr = $username = $confirm_passwordErr = $message = $error = "";
     $password = $new_password = $confirm_password  = "";
 
