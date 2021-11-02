@@ -85,7 +85,7 @@
 
     function verify_id_password($id,$password){
         $conn = $this->db_conn();
-        $selectQuery = "SELECT * FROM `learner` where username = ? AND password= ?";
+        $selectQuery = "SELECT * FROM `learner` where username = ? AND password= BINARY?";
     
         try {
             $stmt = $conn->prepare($selectQuery);

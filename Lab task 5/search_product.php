@@ -13,18 +13,19 @@
     if (isset($_SESSION["name"])) {
         session_destroy();
     }
-    $key  =  $message = "";
+    $key  =  $message = $error = "";
     $product = array();
     $product_update = array();
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $key=$_POST["key"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $key = $_POST["key"];
         require_once "Controller/searchProductController.php";
         $obj = new search();
         if (!empty($obj->search_product($_POST["key"]))) {
-            $product = $obj->search_product($_POST["key"]);
+            $product=$obj->search_product($_POST["key"]);
         }
-    
+        $error=$obj->get_error();
+
         if (!empty($product)) {
             foreach ($product as $row) {
                 $need = array(
@@ -62,6 +63,14 @@
                     <br>
                     <input type="text" name="key" class="input_style" placeholder="type here for search" value="<?php echo $key; ?>">
                 </div>
+                <span style="color: red;font-size: 15px;font-weight: 247px; width: 247px; margin-top: 0px; margin-bottom: 0px;">
+                    <br>
+                    <?php
+                    if ($error) {
+                        echo ($error);
+                    }
+                    ?>
+                </span>
 
                 <div class="button">
                     <input type="submit" class="submit_button" value="Search">

@@ -17,24 +17,6 @@
         header("location:login.php");
     }
 
-    require_once "Controller/get_courseController.php";
-    $obj = new course();
-    $learner = $obj->get_leaarnerCourse($_SESSION['username']);
-
-
-    if (empty($learner)) {
-        $error = "First, add a course to start your study!";
-    } else {
-        $course = $learner["course"];
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $couse_name= $_POST["submit"];
-
-        $_SESSION['course'] = $couse_name;
-        header("location:courseDashboard.php");
-    }
-
 
     ?>
     <div class="split-screen">
