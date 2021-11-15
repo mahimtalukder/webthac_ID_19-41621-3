@@ -31,7 +31,7 @@
         <div class="right">
             <h1>Welcome to ProgSchool!</h1>
             <h1>Available courses:</h1>
-            <table border=1 style="width: 800px;">
+            <table border=1>
                 <tr>
                 <td><b> Course Name </b></td>
                 <td><b> Cost </b></td>

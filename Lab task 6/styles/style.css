@@ -377,6 +377,50 @@ border-radius: 12px;
   font-weight: 500;
   font-family:dotsfont;
 }
+
+.right table{
+  width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar li{
+    float: none;
+    width: 100%;
+  }
+  .header .block-description-one{
+    float: none;
+    width: 100%;
+  }
+  .header .block-description-two li{
+    float: none;
+    width: 100%;
+  }
+
+  .footer .block-description-one {
+    margin-left:0%;
+    float: none;
+    width: 100%;
+  }
+
+  .footer .block-description-two {
+    float: left;
+    width: 100%;
+  }
+
+  .split-screen{
+    float: left;
+    width: 100%;
+  }
+
+  .right table{
+    width: 100%;
+  }
+
+  .right tr{
+    width: 100%;
+  }
+
+}
 /*  My code end */
 
 .view_expenses {
