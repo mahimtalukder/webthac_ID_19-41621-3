@@ -27,7 +27,6 @@
     if (isset($_POST['submit'])) {
         $target_file = $_FILES["fileToUpload"]["name"];
         
-
         $learner=array(
             'file'=>  $target_file,
             'old_file'=> $learner['picture'],
